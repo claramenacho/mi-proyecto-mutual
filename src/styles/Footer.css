@@ -1,0 +1,61 @@
+/* --- FOOTER: Estilo Comunidad y Bienestar --- */
+
+/* Contenedor principal del Footer */
+.footer-container {
+  background-color: #3d403d; /* Un gris oliva muy oscuro, cálido y elegante */
+  color: #fdfaf6;            /* Texto color arena claro */
+  padding: 60px 20px 30px 20px;
+  margin-top: 0;             /* Lo pegamos al contenido para que fluya mejor */
+}
+
+/* Distribución de las columnas */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+/* Estilo para cada columna */
+.footer-section {
+  flex: 1;
+  min-width: 250px; 
+}
+
+.footer-section h3, .footer-section h4 {
+  color: #8eb486; /* Verde oliva para destacar títulos (Bienestar) */
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Listas del footer */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: #dcd0c0; /* Beige suave para los links */
+  transition: all 0.3s ease;
+}
+
+.footer-section li:hover {
+  color: #8eb486; /* Cambio a verde oliva al pasar el mouse */
+  transform: translateX(5px); /* Pequeño movimiento sutil */
+}
+
+/* Línea final de derechos reservados */
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(142, 180, 134, 0.2); /* Línea verde muy transparente */
+  font-size: 0.85rem;
+  color: #a89f91; /* Gris arena para el copyright */
+  letter-spacing: 0.5px;
+}

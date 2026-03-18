@@ -1,0 +1,52 @@
+.entidades-page {
+  padding-bottom: 80px;
+  background-color: #ffffff;
+}
+
+.entidades-container {
+  display: grid;
+  /* Crea columnas de al menos 250px que se ajustan solas */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.entidad-card {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.entidad-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transform: translateY(-5px);
+  border-color: #3498db;
+}
+
+.logo-placeholder {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: #bdc3c7;
+  font-weight: bold;
+}
+
+.entidad-card h3 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.entidad-card p {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+}

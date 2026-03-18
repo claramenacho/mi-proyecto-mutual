@@ -1,0 +1,90 @@
+/* --- EL CORAZÓN DEL DISEÑO SPLIT (ACTUALIZADO) --- */
+.hero-split {
+  display: flex;
+  min-height: 85vh; 
+  width: 100%;
+  flex-wrap: wrap;
+  background-color: #fdfaf6; /* Fondo arena suave */
+}
+
+/* LA MITAD CÁLIDA (TEXTO) */
+.hero-left {
+  flex: 1;
+  min-width: 320px;
+  background-color: #ffffff; /* Blanco puro para que resalte el texto */
+  color: #4a4a4a;            /* Gris piedra oscuro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 10%; 
+  border-right: 1px solid #eee1d5; /* Separación sutil */
+}
+
+.hero-left h2 {
+  font-size: 3rem;
+  font-weight: 300; /* Letra más fina y elegante */
+  margin-bottom: 25px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  color: #666; /* Texto más suave */
+}
+
+/* LA MITAD DE LA IMAGEN */
+.hero-right {
+  flex: 1;
+  min-width: 320px;
+  background-color: #faf7f2; /* Un tono apenas más tierra */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.hero-right img {
+  width: 85%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06); /* Sombra muy suave y natural */
+  filter: sepia(10%) contrast(95%); /* El mismo filtro que usamos en servicios */
+}
+
+/* BOTÓN DE SERVICIOS (ESTILO ORGÁNICO) */
+.btn-servicios {
+  padding: 14px 30px;
+  width: fit-content;
+  background-color: #8eb486; /* Verde oliva Bienestar */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(142, 180, 134, 0.2);
+}
+
+.btn-servicios:hover {
+  background-color: #7da375; /* Un verde un poquito más oscuro al pasar el mouse */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(142, 180, 134, 0.3);
+}
+
+/* AJUSTE PARA CELULARES */
+@media (max-width: 768px) {
+  .hero-left {
+    padding: 60px 8%;
+    text-align: center;
+    align-items: center;
+    border-right: none;
+  }
+  
+  .hero-left h2 {
+    font-size: 2.2rem;
+  }
+}

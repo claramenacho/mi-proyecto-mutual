@@ -1,0 +1,117 @@
+/* --- CONTACTO: Estilo Bienestar y Cercanía --- */
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 60px auto;
+  gap: 50px;
+  padding: 0 5%;
+  background-color: #fdfaf6; /* Fondo arena suave */
+}
+
+/* Columna de Información (Estilo Tarjeta Cálida) */
+.contacto-info {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f8f1e7; /* Un tono apenas más tierra que el fondo */
+  color: #4a4a4a;            /* Gris piedra oscuro */
+  padding: 45px;
+  border-radius: 20px;
+  border-left: 6px solid #8eb486; /* El detalle verde oliva */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.contacto-info h2 {
+  margin-bottom: 35px;
+  color: #8eb486; /* Verde bienestar */
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.info-item {
+  margin-bottom: 30px;
+}
+
+.info-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #a89f91; /* Beige grisáceo para los subtítulos */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Columna del Formulario (Limpio y Moderno) */
+.contacto-form {
+  flex: 1;
+  min-width: 300px;
+  padding-top: 20px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.input-group input, 
+.input-group textarea {
+  padding: 14px;
+  border: 1px solid #eee1d5; /* Borde color arena suave */
+  background-color: white;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  border-color: #8eb486; /* Foco en verde oliva */
+  box-shadow: 0 0 10px rgba(142, 180, 134, 0.1);
+}
+
+/* BOTÓN DE ENVIAR */
+.btn-enviar {
+  background-color: #8eb486; /* Verde Oliva Bienestar */
+  color: white;
+  border: none;
+  padding: 16px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(142, 180, 134, 0.2);
+}
+
+.btn-enviar:hover {
+  background-color: #7da375;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(142, 180, 134, 0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .contacto-container {
+    margin: 30px auto;
+    gap: 30px;
+  }
+  
+  .contacto-info {
+    padding: 30px;
+  }
+}

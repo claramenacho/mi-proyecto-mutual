@@ -1,0 +1,54 @@
+/* --- NAVBAR: Estilo Bienestar e Integración --- */
+
+.main-header {
+  background-color: #fdfaf6; /* Fondo arena suave, igual que el resto de la página */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 15px 5%;
+  width: 100%;
+  box-sizing: border-box; 
+  border-bottom: 1px solid #eee1d5; /* Una línea divisoria muy fina */
+  position: fixed; /* Para que siempre esté visible al scrollear */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo h1 {
+  color: #4a4a4a; /* Gris piedra oscuro en lugar de blanco */
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Contenedor de los botones del nav */
+nav div {
+  display: flex;
+  gap: 20px; 
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #666; /* Texto suave */
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav button:hover {
+  color: #8eb486; /* Verde oliva al pasar el mouse */
+  transform: translateY(-2px); 
+}
+
+/* Estilo para el botón cuando la página está activa */
+.active-link button {
+  color: #8eb486 !important; /* El verde oliva de la Mutual */
+  border-bottom: 2px solid #8eb486; /* La rayita ahora es verde */
+  padding-bottom: 4px;
+  font-weight: 600;
+}

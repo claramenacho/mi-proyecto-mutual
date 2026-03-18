@@ -1,0 +1,204 @@
+/* --- Variables de Identidad: Calidez y Bienestar --- */
+:root {
+    --color-fondo: #fdfaf6;      /* Arena muy suave */
+    --color-texto: #4a4a4a;      /* Gris piedra oscuro */
+    --color-acento: #8eb486;     /* Verde oliva (Bienestar) */
+    --color-secundario: #a89f91; /* Beige grisáceo */
+    --blanco-puro: #ffffff;
+}
+
+/* --- Estructura General --- */
+.servicios-page {
+    padding-top: 80px;
+    background-color: var(--color-fondo);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+}
+
+/* --- Header y Botones --- */
+.servicios-header {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: var(--blanco-puro);
+    border-bottom: 1px solid #eee1d5;
+}
+
+.servicios-header h1 {
+    font-size: 3.2rem;
+    font-weight: 300; /* Más fino, más elegante */
+    color: var(--color-texto);
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.servicios-header p {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    max-width: 600px;
+    margin: 0 auto 35px;
+}
+
+.botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.servicios-header button {
+    background-color: var(--blanco-puro);
+    color: var(--color-secundario);
+    border: 1px solid #dcd0c0;
+    padding: 12px 28px;
+    border-radius: 8px; /* Diseño más orgánico */
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.servicios-header button:hover {
+    background-color: var(--color-acento);
+    color: var(--blanco-puro);
+    border-color: var(--color-acento);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(142, 180, 134, 0.2);
+}
+
+/* --- Bloques de Servicios (Intercalados) --- */
+.servicios-lista {
+    padding-bottom: 60px;
+}
+
+.servicio-bloque {
+    display: flex;
+    align-items: center;
+    padding: 100px 12%;
+    gap: 80px;
+    transition: all 0.5s ease;
+}
+
+/* El efecto espejo automático del map */
+.servicio-bloque.reverse {
+    flex-direction: row-reverse;
+    background-color: #faf7f2; /* Un tono apenas más tierra */
+}
+
+.servicio-info {
+    flex: 1;
+}
+
+.servicio-info h2 {
+    font-size: 2.6rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    color: var(--color-texto);
+}
+
+.servicio-info p {
+    line-height: 1.9;
+    font-size: 1.15rem;
+    color: #666;
+}
+
+.servicio-imagen {
+    flex: 1;
+}
+
+.servicio-imagen img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    /* Filtro sutil para unificar fotos de distintas fuentes */
+    filter: sepia(15%) contrast(95%); 
+}
+
+/* --- Sección de Valores --- */
+.valores-section {
+    padding: 100px 10%;
+    text-align: center;
+    background-color: var(--blanco-puro);
+}
+
+.titulo-valores {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+    color: var(--color-texto);
+}
+
+.valores-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.valor-card {
+    background: var(--color-fondo);
+    padding: 45px 30px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 280px;
+    max-width: 380px;
+    border-bottom: 4px solid var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+}
+
+.valor-card h3 {
+    color: var(--color-acento);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .servicio-bloque, 
+    .servicio-bloque.reverse {
+        flex-direction: column;
+        padding: 60px 8%;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .servicios-header h1 {
+        font-size: 2.4rem;
+    }
+}
+/* Estado inicial: Invisible y un poco más abajo */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* Estado final: Cuando el 'vigilante' detecta que se ve en pantalla */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.skeleton {
+  background: #eee1d5; /* Color arena base */
+  background: linear-gradient(110deg, #eee1d5 8%, #fdfaf6 18%, #eee1d5 33%);
+  border-radius: 20px;
+  background-size: 200% 100%;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* El tamaño del skeleton de la imagen */
+.skeleton-img {
+  width: 100%;
+  height: 450px;
+}

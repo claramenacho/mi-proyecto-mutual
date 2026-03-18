@@ -1,0 +1,43 @@
+/* Contenedor que agrupa las 3 tarjetas */
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;            /* Espacio parejo entre las tarjetas */
+  padding: 80px 5%;     /* Espacio arriba y abajo para que respire el diseño */
+  background-color: #f9f9f9; /* Un gris casi blanco para separarlo del Hero */
+}
+
+/* Estilo individual de cada tarjeta */
+.card {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 12px;    /* Bordes redondeados modernos */
+  text-align: center;
+  
+  /* La "magia" del relieve (Sombra suave) */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Animación para cuando pasamos el mouse */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse: la tarjeta "sube" un poquito */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo para los títulos de las tarjetas */
+.card h3 {
+  color: #2c3e50; /* El mismo azul del Navbar para mantener la identidad */
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+/* Estilo para el texto descriptivo */
+.card p {
+  color: #7f8c8d; /* Un gris más suave para que sea fácil de leer */
+  line-height: 1.6;
+}
