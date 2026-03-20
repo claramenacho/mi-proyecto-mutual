@@ -7,6 +7,7 @@ import { LaMutual } from '../services/LaMutual';
 import { Entidades } from '../services/Entidades';
 import { Contacto } from '../services/Contacto';
 import { WhatsappBtn } from '../components/WhatsappBtn'
+import { FeriaArtesanos } from '../feria/feriaArtesanos';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/lamutual' element={<LaMutual/>} />
         <Route path='/entidades' element={<Entidades/>} />
         <Route path='/contacto' element={<Contacto/>} />
+        <Route path='/FeriaArtesanos' element={<FeriaArtesanos/>} />
       </Routes>
       <WhatsappBtn /> {/* <--- Agregalo acá, antes del cierre del Router */}
       {/* El Footer también es global */}
